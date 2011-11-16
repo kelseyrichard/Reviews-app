@@ -1,12 +1,11 @@
 from django.conf.urls.defaults import *
-
-
+# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(",
     # Examples:
-    #(r'^$', 'reviewapp.reviews.views.homepage', name='homepage'),
+    (r'^$', 'reviewapp.reviews.views.homepage', name='homepage'),
     #(r'^reviewapp/$', include('reviewapp.reviews.views.rating'),
     #(r'^reviews/(?P<rating>[-\w]+)/$',reviewapp.reviews.views.rating'),
     # Uncomment the admin/doc line below to enable admin documentation:
