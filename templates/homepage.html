@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Top {{ top_restaurants|length }}</h1>
+<ol>{% for object in top_restaurants %}
+<li><a href="{{ object.get_absolute_url }}">{{ object.name }} ({{ object.average_rating }})</a></li>
+{% endfor %}
+</ol>
+
+<h1>Most Recent Reviews</h1>
+<ol>{% for object in review %}
+<li><a href="{{ object.get_absolute_url }}">{{ object.restaurant.name }} ({{ object.rating }})</a></li>
+{% endfor %}
+</ol>
+
+
+{% endblock %} 
+
+
+
+
+
