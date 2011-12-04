@@ -16,7 +16,18 @@
 
 {% endblock %} 
 
+{% block cuisines %}
+<h2>Browse by cuisine type</h2>
+<ul>{% for object in cuisine_type %}
+<li><a href="{{ object.get_absolute_url }}">{{ object.category }}</a></li>
+{% endfor %} </ul>
 
+{% endblock %}
 
+{% block restaurants %}
+<h2>Browse by restaurant type</h2>
+<ul>{% for object in restaurant_type %}
+<li><a href="{{ object.get_absolute_url }}">{{ object.restaurant_type }}</a></li>
+{% endfor %} </ul>
 
-
+{% endblock %}

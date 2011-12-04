@@ -42,6 +42,3 @@ class Review(models.Model):
          return "/review/%i/" % self.id
     def __unicode__(self):
         return self.restaurant.name
-
-
-

@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1>{{ review.restaurant.name }}</h1>
-<strong>{{ review.reviewer }}</strong>
-{{ review.review|linebreaks }}
+<h1>Browse by category</h1>
+<strong>Categories:</strong>
+<ul>{% for object in category %}
+<li><a href="{{ object.get_absolute_url }}">{{ object.category }}</a></li>
+{% endfor %}</ul>
 {% endblock %} 
 
 {% block cuisines %}
